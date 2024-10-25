@@ -11,36 +11,9 @@ export default function Main() {
   const [url_set, setUrl] = useState(url);
   const [search, setSearch] = useState([]);
 
-  useEffect(() => {
-    fetch(url_set)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data.results);
-        setMovieData(data.results);
-      });
-  }, [url_set]);
-
-  const getData = (movieType) => {
-    if (movieType == "POPULAR") {
-      url = base_url + "/movie/popular?" + API_key;
-    }
-    if (movieType == "THEATRE") {
-      url = base_url + "/movie/now_playing?" + API_key;
-    }
-    if (movieType == "KIDS") {
-      url = base_url + "/discover/movie?" + API_key + "&with_genres=10751";
-    }
-    if (movieType == "DRAMA") {
-      url = base_url + "/tv/popular?" + API_key;
-    }
-    if (movieType == "COMEDY") {
-      url = base_url + "/discover/movie?" + API_key + "&with_genres=35";
-    }
-    setUrl(url);
-  };
-  const handleSearch = () => {
+  const handleSearch = (event) => {
+    event.preventDefault();
     if (search.trim() !== "") {
-      // Check if the search input is not empty
       const searchUrl =
         base_url +
         "/search/movie?api_key=a615c902f9f5dcd954afca90ba540a60&query=" +
@@ -51,14 +24,44 @@ export default function Main() {
 
   function searchMovie(evt) {
     if (evt.key === "Enter") {
-      url =
+      evt.preventDefault();
+      const searchUrl =
         base_url +
         "/search/movie?api_key=a615c902f9f5dcd954afca90ba540a60&query=" +
         search;
-      setUrl(url);
-      setSearch(" ");
+      setUrl(searchUrl);
+      // window.location.hash = "#";
     }
   }
+
+  useEffect(() => {
+    fetch(url_set)
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data.results);
+        setMovieData(data.results);
+      });
+  }, [url_set]);
+
+  const getData = (movieType) => {
+    if (movieType === "POPULAR") {
+      url = base_url + "/movie/popular?" + API_key;
+    }
+    if (movieType === "THEATRE") {
+      url = base_url + "/movie/now_playing?" + API_key;
+    }
+    if (movieType === "KIDS") {
+      url = base_url + "/discover/movie?" + API_key + "&with_genres=10751";
+    }
+    if (movieType === "DRAMA") {
+      url = base_url + "/tv/popular?" + API_key;
+    }
+    if (movieType === "COMEDY") {
+      url = base_url + "/discover/movie?" + API_key + "&with_genres=35";
+    }
+    setUrl(url);
+  };
+
   return (
     <>
       <div className="header">
