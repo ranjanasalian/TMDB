@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/?# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js.download"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFO0lBQ0UsNENBQTRDO0VBQzlDO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2Qiw2QkFBNkI7RUFDN0IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFO0lBQ0UsdUJBQXVCO0VBQ3pCO0VBQ0E7SUFDRSx5QkFBeUI7RUFDM0I7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbIi5BcHAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5BcHAtbG9nbyB7XG4gIGhlaWdodDogNDB2bWluO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuQG1lZGlhIChwcmVmZXJzLXJlZHVjZWQtbW90aW9uOiBuby1wcmVmZXJlbmNlKSB7XG4gIC5BcHAtbG9nbyB7XG4gICAgYW5pbWF0aW9uOiBBcHAtbG9nby1zcGluIGluZmluaXRlIDIwcyBsaW5lYXI7XG4gIH1cbn1cblxuLkFwcC1oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjgyYzM0O1xuICBtaW4taGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogY2FsYygxMHB4ICsgMnZtaW4pO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5BcHAtbGluayB7XG4gIGNvbG9yOiAjNjFkYWZiO1xufVxuXG5Aa2V5ZnJhbWVzIEFwcC1sb2dvLXNwaW4ge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>@import url(https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);</style><style>@import url(https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);</style><style>*{
+    padding:0;
+    margin:0;
+    font-family: "Mulish", sans-serif;
+}
+:root{
+    --primary-color: #a4161a;
+    --secondary-color: #161a1d;
+}
+body{
+     background-color: var(--secondary-color);
+}
+.header{
+    background-color: var(--primary-color);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.0rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    position: relative;
+}
+
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    top:-10px;
+    left:50%;
+    height: 3px;
+    width:0;
+    transform: translate(-50%);
+    background-color: var(--secondary-color);
+    transition: all 0.3 ease-in-out;
+}
+
+nav ul li a:hover:before{
+    width:100%;
+}
+nav ul li a:focus{
+    background-color: var(--secondary-color);
+    opacity: 0.2px;
+    border-radius: 20px ;
+}
+
+nav ul li a:focus:before{
+    width:0%;
+}
+
+.search-btn{
+    display: flex;
+}
+.inputText{
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0;
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--secondary-color);
+    /* box-shadow: inset 0 5px 10px var(--primary-color); */
+}
+.inputText::placeholder{
+    color: white; 
+    font-family:'Courier New', Courier, monospace;
+}
+.search-btn button{
+    background-color: var(--primary-color);
+    /* box-shadow: inset 0 5px 10px var(--secondary-color); */
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+}
+.container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.movie{
+    box-shadow:0 5px 10px black;
+    width:250px;
+    background-color: var(--primary-color);
+    margin: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.movie .poster{
+    width: 100%;
+    height: 250px;
+}
+.movie-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.movie-details .box{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.movie-details .title{
+    width:160px;
+    text-align: center;
+}
+
+.movie-details .overview{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    max-height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    color: white;
+    box-sizing: border-box;
+    padding: 1rem;
+    transition: all 0.4s ease-in-out;
+    overflow-y: auto;
+    transform: translateY(101%);
+}
+
+.movie-details:hover .overview{
+    transform: translate(0%);
+}
+
+.rating{
+    background-color: var(--secondary-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: #a4161a;
+}
+
+@media (max-width:900px){
+    .header{
+        background-color: var(--primary-color);
+        height: 180px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        padding-top: 10px;
+    }
+    .search-btn{
+        width: 200px;
+        margin-right: 100px;
+    }
+}
+
+
+
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvTWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7SUFDSSxTQUFTO0lBQ1QsUUFBUTtJQUNSLGlDQUFpQztBQUNyQztBQUNBO0lBQ0ksd0JBQXdCO0lBQ3hCLDBCQUEwQjtBQUM5QjtBQUNBO0tBQ0ssd0NBQXdDO0FBQzdDO0FBQ0E7SUFDSSxzQ0FBc0M7SUFDdEMsYUFBYTtJQUNiLFdBQVc7SUFDWCxhQUFhO0lBQ2IsNkJBQTZCO0lBQzdCLG1CQUFtQjtJQUNuQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCO0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxxQkFBcUI7SUFDckIsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQixpQkFBaUI7SUFDakIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsU0FBUztJQUNULFFBQVE7SUFDUixXQUFXO0lBQ1gsT0FBTztJQUNQLDBCQUEwQjtJQUMxQix3Q0FBd0M7SUFDeEMsK0JBQStCO0FBQ25DOztBQUVBO0lBQ0ksVUFBVTtBQUNkO0FBQ0E7SUFDSSx3Q0FBd0M7SUFDeEMsY0FBYztJQUNkLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLFFBQVE7QUFDWjs7QUFFQTtJQUNJLGFBQWE7QUFDakI7QUFDQTtJQUNJLGFBQWE7SUFDYix3Q0FBd0M7SUFDeEMsZ0JBQWdCO0lBQ2hCLG9CQUFvQjtJQUNwQixlQUFlO0lBQ2YsWUFBWTtJQUNaLHdDQUF3QztJQUN4Qyx1REFBdUQ7QUFDM0Q7QUFDQTtJQUNJLFlBQVk7SUFDWiw2Q0FBNkM7QUFDakQ7QUFDQTtJQUNJLHNDQUFzQztJQUN0Qyx5REFBeUQ7SUFDekQsc0JBQXNCO0lBQ3RCLGdCQUFnQjtJQUNoQixZQUFZO0lBQ1osZUFBZTtJQUNmLGFBQWE7SUFDYix3Q0FBd0M7QUFDNUM7QUFDQTtJQUNJLFlBQVk7SUFDWixVQUFVO0lBQ1YsYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixlQUFlO0FBQ25COztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLDJCQUEyQjtJQUMzQixXQUFXO0lBQ1gsc0NBQXNDO0lBQ3RDLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLGdCQUFnQjtJQUNoQixrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0FBQ2pCO0FBQ0E7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLHVCQUF1QjtJQUN2QixtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixTQUFTO0lBQ1QsZ0JBQWdCO0lBQ2hCLHNDQUFzQztJQUN0QyxZQUFZO0lBQ1osWUFBWTtJQUNaLHNCQUFzQjtJQUN0QixhQUFhO0lBQ2IsZ0NBQWdDO0lBQ2hDLGdCQUFnQjtJQUNoQiwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSSx3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSx3Q0FBd0M7SUFDeEMsV0FBVztJQUNYLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIsaUJBQWlCO0lBQ2pCLHdDQUF3QztJQUN4QyxxQ0FBcUM7SUFDckMsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixXQUFXO0lBQ1gsY0FBYztBQUNsQjs7QUFFQTtJQUNJO1FBQ0ksc0NBQXNDO1FBQ3RDLGFBQWE7SUFDakI7O0lBRUE7UUFDSSxhQUFhO1FBQ2Isc0JBQXNCO0lBQzFCO0lBQ0E7UUFDSSxpQkFBaUI7SUFDckI7SUFDQTtRQUNJLFlBQVk7UUFDWixtQkFBbUI7SUFDdkI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUFyaW1hOndnaHRAMTAwLi43MDAmZmFtaWx5PURNK1NhbnM6aXRhbCxvcHN6LHdnaHRAMCw5Li40MCwxMDAuLjEwMDA7MSw5Li40MCwxMDAuLjEwMDAmZmFtaWx5PVBsYXl3cml0ZStHQitTOml0YWwsd2dodEAwLDEwMC4uNDAwOzEsMTAwLi40MDAmZmFtaWx5PVBvcHBpbnM6aXRhbCx3Z2h0QDAsMTAwOzAsMjAwOzAsMzAwOzAsNDAwOzAsNTAwOzAsNjAwOzAsNzAwOzAsODAwOzAsOTAwOzEsMTAwOzEsMjAwOzEsMzAwOzEsNDAwOzEsNTAwOzEsNjAwOzEsNzAwOzEsODAwOzEsOTAwJmRpc3BsYXk9c3dhcCcpO1xyXG5AaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1BcmltYTp3Z2h0QDEwMC4uNzAwJmZhbWlseT1CZWJhcytOZXVlJmZhbWlseT1ETStTYW5zOml0YWwsb3Bzeix3Z2h0QDAsOS4uNDAsMTAwLi4xMDAwOzEsOS4uNDAsMTAwLi4xMDAwJmZhbWlseT1JQk0rUGxleCtTYW5zOml0YWwsd2dodEAwLDEwMDswLDIwMDswLDMwMDswLDQwMDswLDUwMDswLDYwMDswLDcwMDsxLDEwMDsxLDIwMDsxLDMwMDsxLDQwMDsxLDUwMDsxLDYwMDsxLDcwMCZmYW1pbHk9TXVsaXNoOml0YWwsd2dodEAwLDIwMC4uMTAwMDsxLDIwMC4uMTAwMCZmYW1pbHk9UGxheXdyaXRlK0dCK1M6aXRhbCx3Z2h0QDAsMTAwLi40MDA7MSwxMDAuLjQwMCZmYW1pbHk9UG9wcGluczppdGFsLHdnaHRAMCwxMDA7MCwyMDA7MCwzMDA7MCw0MDA7MCw1MDA7MCw2MDA7MCw3MDA7MCw4MDA7MCw5MDA7MSwxMDA7MSwyMDA7MSwzMDA7MSw0MDA7MSw1MDA7MSw2MDA7MSw3MDA7MSw4MDA7MSw5MDAmZGlzcGxheT1zd2FwJyk7XHJcbip7XHJcbiAgICBwYWRkaW5nOjA7XHJcbiAgICBtYXJnaW46MDtcclxuICAgIGZvbnQtZmFtaWx5OiBcIk11bGlzaFwiLCBzYW5zLXNlcmlmO1xyXG59XHJcbjpyb290e1xyXG4gICAgLS1wcmltYXJ5LWNvbG9yOiAjYTQxNjFhO1xyXG4gICAgLS1zZWNvbmRhcnktY29sb3I6ICMxNjFhMWQ7XHJcbn1cclxuYm9keXtcclxuICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xyXG59XHJcbi5oZWFkZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yKTtcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xyXG59XHJcblxyXG5uYXYgdWx7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcbm5hdiB1bCBsaXtcclxuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDFyZW07XHJcbn1cclxubmF2IHVsIGxpIGF7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXNpemU6IDEuMHJlbTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgcGFkZGluZzogMC4ycmVtIDAuNnJlbTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxubmF2IHVsIGxpIGE6OmJlZm9yZXtcclxuICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6LTEwcHg7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIGhlaWdodDogM3B4O1xyXG4gICAgd2lkdGg6MDtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5LWNvbG9yKTtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjMgZWFzZS1pbi1vdXQ7XHJcbn1cclxuXHJcbm5hdiB1bCBsaSBhOmhvdmVyOmJlZm9yZXtcclxuICAgIHdpZHRoOjEwMCU7XHJcbn1cclxubmF2IHVsIGxpIGE6Zm9jdXN7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xyXG4gICAgb3BhY2l0eTogMC4ycHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAyMHB4IDtcclxufVxyXG5cclxubmF2IHVsIGxpIGE6Zm9jdXM6YmVmb3Jle1xyXG4gICAgd2lkdGg6MCU7XHJcbn1cclxuXHJcbi5zZWFyY2gtYnRue1xyXG4gICAgZGlzcGxheTogZmxleDtcclxufVxyXG4uaW5wdXRUZXh0e1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLXNlY29uZGFyeS1jb2xvcik7XHJcbiAgICBib3JkZXItcmFkaXVzOiAwO1xyXG4gICAgcGFkZGluZzogMC4zcmVtIDFyZW07XHJcbiAgICBmb250LXNpemU6IDFyZW07XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xyXG4gICAgLyogYm94LXNoYWRvdzogaW5zZXQgMCA1cHggMTBweCB2YXIoLS1wcmltYXJ5LWNvbG9yKTsgKi9cclxufVxyXG4uaW5wdXRUZXh0OjpwbGFjZWhvbGRlcntcclxuICAgIGNvbG9yOiB3aGl0ZTsgXHJcbiAgICBmb250LWZhbWlseTonQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbn1cclxuLnNlYXJjaC1idG4gYnV0dG9ue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvcik7XHJcbiAgICAvKiBib3gtc2hhZG93OiBpbnNldCAwIDVweCAxMHB4IHZhcigtLXNlY29uZGFyeS1jb2xvcik7ICovXHJcbiAgICBwYWRkaW5nOiAwLjJyZW0gMC41cmVtO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtc2l6ZTogMXJlbTtcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xyXG59XHJcbi5jb250YWluZXJ7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICB3aWR0aDogODAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG59XHJcblxyXG5pbWd7XHJcbiAgICBtYXgtd2lkdGg6IDMwMHB4O1xyXG4gICAgbWF4LWhlaWdodDogMzAwcHg7XHJcbn1cclxuXHJcbi5tb3ZpZXtcclxuICAgIGJveC1zaGFkb3c6MCA1cHggMTBweCBibGFjaztcclxuICAgIHdpZHRoOjI1MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeS1jb2xvcik7XHJcbiAgICBtYXJnaW46IDFyZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG4ubW92aWUgLnBvc3RlcntcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiAyNTBweDtcclxufVxyXG4ubW92aWUtZGV0YWlsc3tcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcbi5tb3ZpZS1kZXRhaWxzIC5ib3h7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDFyZW07XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG59XHJcblxyXG4ubW92aWUtZGV0YWlscyAudGl0bGV7XHJcbiAgICB3aWR0aDoxNjBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLm1vdmllLWRldGFpbHMgLm92ZXJ2aWV3e1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDowO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXByaW1hcnktY29sb3IpO1xyXG4gICAgb3BhY2l0eTogMC45O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIHBhZGRpbmc6IDFyZW07XHJcbiAgICB0cmFuc2l0aW9uOiBhbGwgMC40cyBlYXNlLWluLW91dDtcclxuICAgIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMTAxJSk7XHJcbn1cclxuXHJcbi5tb3ZpZS1kZXRhaWxzOmhvdmVyIC5vdmVydmlld3tcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAlKTtcclxufVxyXG5cclxuLnJhdGluZ3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNlY29uZGFyeS1jb2xvcik7XHJcbiAgICB3aWR0aDogNDVweDtcclxuICAgIGhlaWdodDogNDVweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGRpc3BsYXk6ZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tc2Vjb25kYXJ5LWNvbG9yKTtcclxuICAgIGJveC1zaGFkb3c6IDAgNXB4IDVweCByZ2JhKDAsMCwwLDAuNSk7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICByaWdodDogNXB4O1xyXG4gICAgYm90dG9tOiA1cHg7XHJcbiAgICBjb2xvcjogI2E0MTYxYTtcclxufVxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6OTAwcHgpe1xyXG4gICAgLmhlYWRlcntcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1wcmltYXJ5LWNvbG9yKTtcclxuICAgICAgICBoZWlnaHQ6IDE4MHB4O1xyXG4gICAgfVxyXG5cclxuICAgIG5hdiB1bHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICB9XHJcbiAgICBuYXYgdWwgbGl7XHJcbiAgICAgICAgcGFkZGluZy10b3A6IDEwcHg7XHJcbiAgICB9XHJcbiAgICAuc2VhcmNoLWJ0bntcclxuICAgICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxMDBweDtcclxuICAgIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="header"><nav><ul><li><a href="http://localhost:3000/?#" name="POPULAR">POPULAR</a></li><li><a href="http://localhost:3000/?#" name="THEATRE">THEATRE</a></li><li><a href="http://localhost:3000/?#" name="KIDS">KIDS</a></li><li><a href="http://localhost:3000/?#" name="DRAMA">DRAMA</a></li><li><a href="http://localhost:3000/?#" name="COMEDY">COMEDY</a></li></ul></nav><form><div class="search-btn"><input type="text" placeholder="Enter Movie Name" class="inputText" value=""><button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></button></div></form></div><div class="container"><div class="movie"><img src="./React App_files/uL1dR0L65GZgy3h2gvZcxDu0bRG.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Family Pack</h4><p class="rating">5.182</p></div><div class="overview"><h1>overview</h1>When an old card game comes to life, a family jumps back in time to a medieval village where they must unmask werewolves to secure their return home.</div></div></div><div class="movie"><img src="./React App_files/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Transformers One</h4><p class="rating">7.9</p></div><div class="overview"><h1>overview</h1>The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but once were friends bonded like brothers who changed the fate of Cybertron forever.</div></div></div><div class="movie"><img src="./React App_files/k42Owka8v91trK1qMYwCQCNwJKr.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Venom: The Last Dance</h4><p class="rating">7.2</p></div><div class="overview"><h1>overview</h1>Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.</div></div></div><div class="movie"><img src="./React App_files/5DuTUE3yOvRa5p9moUUqSzFUG6Z.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Canary Black</h4><p class="rating">7</p></div><div class="overview"><h1>overview</h1>Top level CIA agent Avery Graves is blackmailed by terrorists into betraying her own country to save her kidnapped husband. Cut off from her team, she turns to her underworld contacts to survive and help locate the coveted intelligence that the kidnappers want.</div></div></div><div class="movie"><img src="./React App_files/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> The Wild Robot</h4><p class="rating">8.684</p></div><div class="overview"><h1>overview</h1>After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.</div></div></div><div class="movie"><img src="./React App_files/63xYQj1BwRFielxsBDXvHIJyXVm.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Terrifier 3</h4><p class="rating">6.991</p></div><div class="overview"><h1>overview</h1>Five years after surviving Art the Clown's Halloween massacre, Sienna and Jonathan are still struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.</div></div></div><div class="movie"><img src="./React App_files/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Alien: Romulus</h4><p class="rating">7.3</p></div><div class="overview"><h1>overview</h1>While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.</div></div></div><div class="movie"><img src="./React App_files/lqoMzCcZYEFK729d6qzt349fB4o.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> The Substance</h4><p class="rating">7.3</p></div><div class="overview"><h1>overview</h1>A fading celebrity decides to usea black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.</div></div></div><div class="movie"><img src="./React App_files/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Deadpool &amp; Wolverine</h4><p class="rating">7.714</p></div><div class="overview"><h1>overview</h1>A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.</div></div></div><div class="movie"><img src="./React App_files/aE85MnPIsSoSs3978Noo16BRsKN.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Smile 2</h4><p class="rating">7</p></div><div class="overview"><h1>overview</h1>About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.</div></div></div><div class="movie"><img src="./React App_files/o5zHDxx9aGtg0bK9gVghik8ohYb.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Classified</h4><p class="rating">4.8</p></div><div class="overview"><h1>overview</h1>Operating alone in the field for more than 20 years, a CIA hitman uses the "Help Wanted" section of the newspapers to get his orders from the Agency. His long-lost daughter, now a UK MI6 analyst, tracks him down to deliver shocking news: his CIA boss has been dead for years and the division long since shut down. Together, they set out to discover whose orders he's been executing.</div></div></div><div class="movie"><img src="./React App_files/nc9ZqrJFbcUdlMg9lxXXtJb24jU.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Woman of the Hour</h4><p class="rating">6.736</p></div><div class="overview"><h1>overview</h1>An aspiring actress crosses paths with a prolific serial killer in '70s LA when they're cast on an episode of "The Dating Game."</div></div></div><div class="movie"><img src="./React App_files/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Venom</h4><p class="rating">6.8</p></div><div class="overview"><h1>overview</h1>Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own.</div></div></div><div class="movie"><img src="./React App_files/cfkcrKySRyJiIdLo6c6kNSyLFh7.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> The Shadow Strays</h4><p class="rating">7.3</p></div><div class="overview"><h1>overview</h1>Skilled in the art of killing, a young assassin defies her mentor to save a boy from a ruthless crime syndicate — and she'll destroy anyone in her path.</div></div></div><div class="movie"><img src="./React App_files/fDtkrO2OAF8LKQTdzYmu1Y7lCLB.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Speak No Evil</h4><p class="rating">7.3</p></div><div class="overview"><h1>overview</h1>When an American family is invited to spend the weekend at the idyllic country estate of a charming British family they befriended on vacation, what begins as a dream holiday soon warps into a snarled psychological nightmare.</div></div></div><div class="movie"><img src="./React App_files/aciP8Km0waTLXEYf5ybFK5CSUxl.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Joker: Folie à Deux</h4><p class="rating">5.803</p></div><div class="overview"><h1>overview</h1>While struggling with his dual identity, Arthur Fleck not only stumbles upon true love, but also finds the music that's always been inside him.</div></div></div><div class="movie"><img src="./React App_files/2kZIKn4eLqGzyqOpW7ZpaBACQHW.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> A Mother's Embrace</h4><p class="rating">6</p></div><div class="overview"><h1>overview</h1>A survival horror set in 1996 during one of the biggest tropical storms ever to hit Rio de Janeiro. Ana and her firefighter team must evacuate a nursing home at risk of its collapsing – but they soon find the mysterious residents in the house have other plans.</div></div></div><div class="movie"><img src="./React App_files/kKgQzkUCnQmeTPkyIwHly2t6ZFI.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Beetlejuice Beetlejuice</h4><p class="rating">7.213</p></div><div class="overview"><h1>overview</h1>After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Betelgeuse, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.</div></div></div><div class="movie"><img src="./React App_files/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Gladiator II</h4><p class="rating">0</p></div><div class="overview"><h1>overview</h1>Years after witnessing the death of the revered hero Maximus at the hands of his uncle, Lucius is forced to enter the Colosseum after his home is conquered by the tyrannical Emperors who now lead Rome with an iron fist. With rage in his heart and the future of the Empire at stake, Lucius must look to his past to find strength and honor to return the glory of Rome to its people.</div></div></div><div class="movie"><img src="./React App_files/9DKH4j80eR4qAcGDoShlUO7D0Is.jpg" class="poster"><div class="movie-details"><div class="box"><h4 class="title"> Carved</h4><p class="rating">4.6</p></div><div class="overview"><h1>overview</h1>On Halloween 1993, 2 years after a deadly nuclear spill, the staff of a historic pioneer village attraction must work together to survive the attack of a monstrous killer pumpkin set on revenge.</div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>
