@@ -30,7 +30,6 @@ export default function Main() {
         "/search/movie?api_key=a615c902f9f5dcd954afca90ba540a60&query=" +
         search;
       setUrl(searchUrl);
-      // window.location.hash = "#";
     }
   }
 
