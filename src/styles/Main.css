@@ -6,8 +6,8 @@
     font-family: "Mulish", sans-serif;
 }
 :root{
-    --primary-color: #a4161a;
-    --secondary-color: #161a1d;
+    --primary-color: #032541;
+    --secondary-color: #eeedec;
 }
 body{
      background-color: var(--secondary-color);
@@ -22,6 +22,11 @@ body{
     margin-bottom: 30px;
 }
 
+.app-title{
+    color: white;
+    margin: 0;
+    margin-left:-200px;
+}
 nav ul{
     display: flex;
 }
@@ -54,7 +59,7 @@ nav ul li a:hover:before{
     width:100%;
 }
 nav ul li a:focus{
-    background-color: var(--secondary-color);
+    background-color: #B99669;
     opacity: 0.2px;
     border-radius: 20px ;
 }
@@ -66,38 +71,63 @@ nav ul li a:focus:before{
 .search-btn{
     display: flex;
 }
+
+.head-search-button{
+    margin: 10px 70px;
+    padding: 60px;
+    border:1px solid #032541;
+    background-image: url("../../public/images/theatre.png");
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+
+}
+.discover{
+    color: white;
+    margin:0;
+    padding: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 10px black;
+}
+
 .inputText{
     outline: none;
     border: 1px solid var(--secondary-color);
     border-radius: 0;
-    padding: 0.3rem 1rem;
-    font-size: 1rem;
-    color: white;
+    padding: 0.8rem 30rem;
+    font-size: 1.2rem;
+    color: #032541;
     background-color: var(--secondary-color);
+    border-radius: 20px 0  0 20px;
     /* box-shadow: inset 0 5px 10px var(--primary-color); */
 }
+
 .inputText::placeholder{
-    color: white; 
+    color: #032541; 
     font-family:'Courier New', Courier, monospace;
 }
+
 .search-btn button{
     background-color: var(--primary-color);
     /* box-shadow: inset 0 5px 10px var(--secondary-color); */
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.8rem;
     border-radius: 0;
     color: white;
     font-size: 1rem;
     outline: none;
     border: 1px solid var(--secondary-color);
+    border-radius: 0 20px 20px 0;
 }
 .container{
     margin: auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+
+/* Card.css */
 img{
     max-width: 300px;
     max-height: 300px;
@@ -115,7 +145,7 @@ img{
 }
 .movie .poster{
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 .movie-details{
     display: flex;
@@ -134,6 +164,7 @@ img{
 .movie-details .title{
     width:160px;
     text-align: center;
+    color: white;
 }
 
 .movie-details .overview{
@@ -156,7 +187,8 @@ img{
 }
 
 .rating{
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color) ; */
+    background: var(--secondary-color) linear-gradient(to right, var(--secondary-color) 50%, #05739C 0);
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -169,7 +201,47 @@ img{
     position: absolute;
     right: 5px;
     bottom: 5px;
-    color: #a4161a;
+    color: #032541;
+}
+.rating p{
+    position: absolute;
+    z-index: 1;
+}
+
+.rating::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* top:0; */
+    left:50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0 / 50%;
+    background: #05739C;
+    transform: rotate(calc(((var(--i) - 50) * 0.02turn)));
+
+}
+.rating::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+.rating::before {
+    background: #05739C;
+    transform: rotate(calc((var(--i) - 50) * 0.01turn));
+}
+
+.ratings-section{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.ratings-section p{
+    position: relative;
+    top: 6px;
+    font-weight: bold;
 }
 
 @media (max-width:900px){
@@ -195,46 +267,128 @@ img{
     font-weight: bold;
     color:var(--primary-color)
 }
+
+
 /* Container styling for the MovieDetails page */
-.movie-details-container {
+.title-bar{
+    margin: 0;
+    padding: 20px 20px 20px 70px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    height: 40px;
+    width: 100%;
     display: flex;
-    flex-direction: row; 
-    margin: 50px;
-    padding:100px;
-    gap: 6rem;
-    max-width: 1200px;
-    background-color: #b40000;
-    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.movie-details-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: -30px;
   }
   
-  /* Content on the left side */
-  .movie-details-content {
+  .movie-details-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    align-items: center;
+    padding:0;
+    gap: 100px;
+  }
+
+  .progress{
+    background: #1a1a1a linear-gradient(to right,#383d04  50%, #cdde0d 0);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    position: relative;
+    right: 1px;
+    bottom: 5px;
+    transition: transform 0.4s ease;
+}
+
+.progress p{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    top:5px;
+}
+.progress::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left:50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0 / 50%;
+    background: #cdde0d;
+    transform: rotate(calc(((var(--i) - 50) * 0.02turn)));
+
+}
+.progress::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background:#1a1a1a;
+}
+.progress::before {
+    background: #cdde0d;
+    transform: rotate(calc((var(--i) - 50) * 0.01turn));
+}
+.progress:hover{
+    transform: scale(1.1);
+}
+
+.movie-details-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 700px;
-    order: 1; /* Ensures content is on the left */
+    order: 1; 
+    margin: 0;
+    margin-top: -200px;
+
   }
   
-  /* Movie poster on the right side */
-  .movie-details-container img {
+ 
+.movie-details-container img {
     width: 300px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    order: 2; /* Ensures image is on the right */
+    order: 2; 
     max-width: 300px;
     max-height: 400px;
+    margin: 0;
+    margin-top: -200px;
+    margin-left: 150px;
   }
   
-  /* Title styling */
+
   .movie-details-container h1 {
     font-size: 2.2rem;
     font-weight: bold;
     color: var(--secondary-color);
     margin-bottom: 1rem;
   }
-  
-  /* Styling for paragraphs and labels */
+ 
   .movie-details-container p {
     font-size: 1rem;
     color: white;
@@ -261,24 +415,21 @@ img{
     display: inline-block;
     margin-top: 2rem;
     padding: 0.8rem 1.5rem;
-    background-color: #161a1d99;
-    color: var(--primary-color); /* Set text color */
-    text-decoration: none; /* Remove underline */
+    background-color: var(--primary-color);
+    color: var(--secondary-color); 
+    text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: center;
     transition: background-color 0.3s ease;
   }
 
- 
-  
   .watch-trailer-button:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.51);
   }
 
-  
-  /* Responsive design for smaller screens */
+
   @media (max-width: 768px) {
     .movie-details-container {
       flex-direction: column;
@@ -290,4 +441,4 @@ img{
       margin-bottom: 1.5rem;
     }
   }
-  
+   

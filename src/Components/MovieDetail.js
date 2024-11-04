@@ -12,15 +12,15 @@ export default function MovieDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchMovieDetail = async () => {
+    async function fetchMovieDetail() {
       const response = await fetch(
         `https://api.themoviedb.org/3/movie/${id}?api_key=${API_key}`
       );
       const data = await response.json();
       setMovieDetail(data);
-    };
+    }
 
-    const fetchTrailer = async () => {
+    async function fetchTrailer() {
       const response = await fetch(
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_key}`
       );
@@ -29,7 +29,7 @@ export default function MovieDetails() {
         (video) => video.type === "Trailer" && video.site === "YouTube"
       );
       if (trailer) setTrailerKey(trailer.key);
-    };
+    }
 
     fetchMovieDetail();
     fetchTrailer();
@@ -37,46 +37,71 @@ export default function MovieDetails() {
 
   if (!movieDetail) return <p>Loading...</p>;
 
-  function handleButtonClick() {
-    navigate(`https://www.youtube.com/embed/${trailerKey}`);
+  function handleclick() {
+    navigate("/");
   }
 
-  return (
-    <div className="movie-details-container">
-      <div className="movie-poster-img">
-        <img src={img_path + movieDetail.poster_path} alt={movieDetail.title} />
-      </div>
-      <div className="movie-details-content">
-        <h1>{movieDetail.title}</h1>
-        <p>
-          <strong>Rating:</strong> {movieDetail.vote_average}
-        </p>
-        <p>
-          <strong>Overview:</strong> {movieDetail.overview}
-        </p>
-        <p>
-          <strong>Release Date:</strong> {movieDetail.release_date}
-        </p>
-        <p>
-          <strong>Genres:</strong>{" "}
-          {movieDetail.genres.map((genre) => genre.name).join(", ")}
-        </p>
+  // function handleButtonClick() {
+  //   navigate(`https://www.youtube.com/embed/${trailerKey}`);
+  // }
 
-        {/* Embed the trailer */}
-        {trailerKey && (
-          <Link
-            to={`https://www.youtube.com/watch?v=${trailerKey}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="watch-trailer-button"
-          >
-            <span>
-              <FaYoutube />
-            </span>{" "}
-            Watch Trailer
-          </Link>
-        )}
+  return (
+    <>
+      <div className="title-bar" onClick={handleclick}>
+        Movieware
       </div>
-    </div>
+      <div
+        className="movie-details-container"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
+        }}
+      >
+        <div className="movie-details-overlay">
+          <div className="movie-poster-img">
+            <img
+              src={img_path + movieDetail.poster_path}
+              alt={movieDetail.title}
+            />
+          </div>
+          <div className="movie-details-content">
+            <h1>{movieDetail.title}</h1>
+            <div className="ratings-section">
+              <p className="p">User Score</p>
+              <div
+                className="progress"
+                style={{ "--i": (movieDetail.vote_average / 10) * 100 }}
+              >
+                <p>{Math.round((movieDetail.vote_average / 10) * 100)}%</p>
+              </div>
+              <p>
+                . {movieDetail.genres.map((genre) => genre.name).join("| ")} .
+              </p>
+            </div>
+
+            <p>
+              <strong>Overview:</strong> {movieDetail.overview}
+            </p>
+            <p>
+              <strong>Release Date:</strong> {movieDetail.release_date}
+            </p>
+
+            {/* Embed the trailer */}
+            {trailerKey && (
+              <Link
+                to={`https://www.youtube.com/watch?v=${trailerKey}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="watch-trailer-button"
+              >
+                <span>
+                  <FaYoutube />
+                </span>{" "}
+                Watch Trailer
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

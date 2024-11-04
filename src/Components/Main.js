@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import Card from "./Card";
+
 let API_key = "&api_key=a615c902f9f5dcd954afca90ba540a60";
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/trending/movie/day?" + API_key;
@@ -43,6 +44,7 @@ export default function Main() {
   }, [url_set]);
 
   const getData = (movieType) => {
+    let url;
     if (movieType === "POPULAR") {
       url = base_url + "/movie/popular?" + API_key;
     }
@@ -53,7 +55,7 @@ export default function Main() {
       url = base_url + "/discover/movie?" + API_key + "&with_genres=10751";
     }
     if (movieType === "DRAMA") {
-      url = base_url + "/tv/popular?" + API_key;
+      url = base_url + "/discover/movie?" + API_key + "&with_genres=18";
     }
     if (movieType === "COMEDY") {
       url = base_url + "/discover/movie?" + API_key + "&with_genres=35";
@@ -64,6 +66,7 @@ export default function Main() {
   return (
     <>
       <div className="header">
+        <h1 className="app-title">Movieware</h1>
         <nav>
           <ul>
             {arr.map((value) => {
@@ -83,11 +86,17 @@ export default function Main() {
             })}
           </ul>
         </nav>
+      </div>
+      <div className="head-search-button">
+        <h1 className="discover">
+          Discover countless movies, TV shows, and personalities—start exploring
+          today!
+        </h1>
         <form>
           <div className="search-btn">
             <input
               type="text"
-              placeholder="Enter Movie Name"
+              placeholder="Search for Movies"
               className="inputText"
               onChange={(e) => {
                 setSearch(e.target.value);
