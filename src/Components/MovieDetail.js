@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/Main.css"; // Make sure to import the CSS file
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaRegClock } from "react-icons/fa";
+import Modal from "./Modal";
 
 export default function MovieDetails() {
   const { id } = useParams();
   const [movieDetail, setMovieDetail] = useState(null);
+  const [cast, setCast] = useState([]); // State to hold cast information
+  const [director, setDirector] = useState(""); // State to hold director name
   const [trailerKey, setTrailerKey] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const API_key = "a615c902f9f5dcd954afca90ba540a60";
   const img_path = "https://image.tmdb.org/t/p/w500";
   const navigate = useNavigate();
@@ -31,8 +35,21 @@ export default function MovieDetails() {
       if (trailer) setTrailerKey(trailer.key);
     }
 
+    async function fetchCredits() {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_key}`
+      );
+      const data = await response.json();
+      setCast(data.cast); // Set cast information
+      const directorData = data.crew.find(
+        (member) => member.job === "Director"
+      );
+      if (directorData) setDirector(directorData.name); // Set director name
+    }
+
     fetchMovieDetail();
     fetchTrailer();
+    fetchCredits(); // Fetch cast and director information
   }, [id]);
 
   if (!movieDetail) return <p>Loading...</p>;
@@ -41,14 +58,28 @@ export default function MovieDetails() {
     navigate("/");
   }
 
-  // function handleButtonClick() {
-  //   navigate(`https://www.youtube.com/embed/${trailerKey}`);
-  // }
+  function getYear(dateString) {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  }
+
+  const convertToTotalMinutes = (date) => {
+    const hours = date.getHours(); // Get hours (0-23)
+    const minutes = date.getMinutes(); // Get minutes (0-59)
+    return hours * 60 + minutes; // Total minutes
+  };
+
+  // Parse release_date to get time and total minutes
+  const releaseDate = new Date(movieDetail.release_date);
+  const totalMinutes = convertToTotalMinutes(releaseDate);
+
+  const openModal = () => setIsModalOpen(true); // Function to open modal
+  const closeModal = () => setIsModalOpen(false); // Function to close modal
 
   return (
     <>
       <div className="title-bar" onClick={handleclick}>
-        Movieware
+        <div className="title">Movieware</div>
       </div>
       <div
         className="movie-details-container"
@@ -64,6 +95,7 @@ export default function MovieDetails() {
             />
           </div>
           <div className="movie-details-content">
+            <p>{getYear(movieDetail.release_date)}</p>
             <h1>{movieDetail.title}</h1>
             <div className="ratings-section">
               <p className="p">User Score</p>
@@ -78,30 +110,37 @@ export default function MovieDetails() {
               </p>
             </div>
 
-            <p>
-              <strong>Overview:</strong> {movieDetail.overview}
+            <p>{movieDetail.overview}</p>
+            <p className="total-minutes">
+              <FaRegClock /> {totalMinutes} mins
             </p>
-            <p>
-              <strong>Release Date:</strong> {movieDetail.release_date}
-            </p>
-
-            {/* Embed the trailer */}
-            {trailerKey && (
-              <Link
-                to={`https://www.youtube.com/watch?v=${trailerKey}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="watch-trailer-button"
-              >
-                <span>
-                  <FaYoutube />
-                </span>{" "}
-                Watch Trailer
-              </Link>
-            )}
+            <button onClick={openModal} className="watch-trailer-button">
+              <span>
+                <FaYoutube />
+              </span>
+              Watch Trailer
+            </button>
           </div>
         </div>
       </div>
+
+      <div className="cast-section">
+        <h3>Cast</h3>
+        <div className="cast-list">
+          {cast.map((actor) => (
+            <div key={actor.id} className="cast-member">
+              <img src={img_path + actor.profile_path} alt={actor.name} />
+              <p>{actor.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        trailerKey={trailerKey}
+      />
     </>
   );
 }
