@@ -63,18 +63,31 @@ export default function MovieDetails() {
     return date.getFullYear();
   }
 
-  const convertToTotalMinutes = (date) => {
+  function convertToTotalMinutes(date) {
     const hours = date.getHours(); // Get hours (0-23)
     const minutes = date.getMinutes(); // Get minutes (0-59)
     return hours * 60 + minutes; // Total minutes
-  };
+  }
 
   // Parse release_date to get time and total minutes
   const releaseDate = new Date(movieDetail.release_date);
   const totalMinutes = convertToTotalMinutes(releaseDate);
 
-  const openModal = () => setIsModalOpen(true); // Function to open modal
-  const closeModal = () => setIsModalOpen(false); // Function to close modal
+  function openModal() {
+    setIsModalOpen(true);
+  } // Function to open modal
+
+  function closeModal() {
+    setIsModalOpen(false);
+  } // Function to close modal
+
+  function openTrailerInNewTab() {
+    if (trailerKey) {
+      window.open(`https://www.youtube.com/watch?v=${trailerKey}`, "_blank");
+    } else {
+      alert("Trailer not available");
+    }
+  }
 
   return (
     <>
@@ -95,6 +108,9 @@ export default function MovieDetails() {
             />
           </div>
           <div className="movie-details-content">
+            <button className="close-button" onClick={handleclick}>
+              &times;
+            </button>
             <p>{getYear(movieDetail.release_date)}</p>
             <h1>{movieDetail.title}</h1>
             <div className="ratings-section">
@@ -114,11 +130,11 @@ export default function MovieDetails() {
             <p className="total-minutes">
               <FaRegClock /> {totalMinutes} mins
             </p>
-            <button onClick={openModal} className="watch-trailer-button">
-              <span>
-                <FaYoutube />
-              </span>
-              Watch Trailer
+            <button
+              onClick={openTrailerInNewTab}
+              className="watch-trailer-button"
+            >
+              <FaYoutube /> Watch Trailer
             </button>
           </div>
         </div>
@@ -135,12 +151,6 @@ export default function MovieDetails() {
           ))}
         </div>
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        trailerKey={trailerKey}
-      />
     </>
   );
 }

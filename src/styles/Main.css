@@ -12,7 +12,7 @@
 body{
      background-color: var(--secondary-color);
 }
-.header{
+/* .header{
     background-color: var(--primary-color);
     height: 100px;
     width: 100%;
@@ -66,21 +66,21 @@ nav ul li a:focus{
 
 nav ul li a:focus:before{
     width:0%;
-}
+} */
 
 .search-btn{
     display: flex;
 }
 
 .head-search-button{
-    margin: 10px 70px;
+    margin: 0px 70px;
+    margin-top: -30px;
     padding: 60px;
     border:1px solid #032541;
     background-image: url("../../public/images/theatre.png");
     justify-content: center;
     text-align: center;
     font-size: 22px;
-
 }
 .discover{
     color: white;
@@ -99,17 +99,16 @@ nav ul li a:focus:before{
     color: #032541;
     background-color: var(--secondary-color);
     border-radius: 20px 0  0 20px;
-    /* box-shadow: inset 0 5px 10px var(--primary-color); */
+    cursor: pointer;
 }
 
 .inputText::placeholder{
-    color: #032541; 
-    font-family:'Courier New', Courier, monospace;
+    color: #afacac; 
+    font-weight: 400;
 }
 
 .search-btn button{
     background-color: var(--primary-color);
-    /* box-shadow: inset 0 5px 10px var(--secondary-color); */
     padding: 0.2rem 0.8rem;
     border-radius: 0;
     color: white;
@@ -117,6 +116,7 @@ nav ul li a:focus:before{
     outline: none;
     border: 1px solid var(--secondary-color);
     border-radius: 0 20px 20px 0;
+    cursor: pointer;
 }
 .container{
     margin: auto;
@@ -126,6 +126,36 @@ nav ul li a:focus:before{
     flex-wrap: wrap;
 }
 
+.main {
+  padding: 30px;
+}
+.movie-info{
+  padding: 20px;
+}
+
+.movie-info p{
+  font-size: 13px;
+}
+/* .section {
+  margin-bottom: 40px;
+}
+
+.section h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}*/
+
+.movie-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.notfound {
+  color: #777;
+  text-align: center;
+} 
 
 /* Card.css */
 img{
@@ -133,19 +163,22 @@ img{
     max-height: 300px;
 }
 
-.movie{
-    box-shadow:0 5px 10px black;
-    width:250px;
+.movie {
+    box-shadow: 0 5px 10px black;
     background-color: var(--primary-color);
     margin: 1rem;
     border-radius: 5px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    flex: 0 0 200px;
 }
-.movie .poster{
+
+.movie .poster {
     width: 100%;
-    height: 350px;
+    max-width: 250px; /* Ensure the poster image width stays consistent */
+    height: 250px;
+    object-fit:fill; /* Maintain aspect ratio */
 }
 .movie-details{
     display: flex;
@@ -163,9 +196,10 @@ img{
 }
 
 .movie-details .title{
-    width:150px;
+    width:120px;
     text-align: center;
     color: white;
+    font-size: 13px;
 }
 
 .movie-details .overview{
@@ -190,12 +224,13 @@ img{
 .rating{
     /* background-color: var(--secondary-color) ; */
     background: var(--secondary-color) linear-gradient(to right, var(--secondary-color) 50%, #05739C 0);
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display:flex;
     justify-content: center;
     align-items: center;
+    font-size: 10px;
     font-weight: bold;
     border: 1px solid var(--secondary-color);
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
@@ -207,6 +242,7 @@ img{
 .rating p{
     position: absolute;
     z-index: 1;
+    font-size: 10px;
 }
 
 .rating::before{
@@ -225,8 +261,8 @@ img{
 .rating::after{
     content: '';
     position: absolute;
-    inset: 4px;
-    border-radius: 50%;
+    inset: 3.5px;
+    border-radius: 60%;
     background: var(--secondary-color);
 }
 .rating::before {
